@@ -72,8 +72,11 @@ while True:
                     # create 5 reviews for each bussiness
                     five_reviews = []
                     for i in range(len(names)):
-                        name = names[i].split(".")[0] + '.'
-                        location = names[i].split(".")[1]
+                        name = names[i].split(".")[0] + '.' if "Qype" not in names[i] else names[i].split(")")[0]
+                        try:   
+                            location = names[i].split(".")[1]
+                        except:
+                            location = names[i].split(")")[1]
                         if "Elite 2023" in location:
                             location = location.replace("Elite 2023", "")
                         five_reviews.append(

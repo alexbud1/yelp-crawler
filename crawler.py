@@ -25,7 +25,6 @@ while True:
     
     # use default search url if it's the first iteration, otherwise use the url with the offset
     if iteration != 0:
-        break
         search_url = f"https://www.yelp.com/search/snippet?find_desc={category}&find_loc={city}&start={iteration*10}&parent_request_id=0366dddfa08e03b6&request_origin=user"
     else:
         search_url = f"https://www.yelp.com/search/snippet?find_desc={category}&find_loc={city}&parent_request_id=0366dddfa08e03b6&request_origin=user"
